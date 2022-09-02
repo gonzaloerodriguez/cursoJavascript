@@ -1,17 +1,27 @@
-for (i = 0; i <= 5; i++) {
+for (i = 1; i <= 5; i++) {
 
-    function turnos(dia, horario, tratamiento, sucursal) {
-        let nombre = prompt('Ingrese su nombre:');
-        let apellido = prompt('Ingrese su apellido:');
-        let edad = Number(prompt('Ingrese su edad:'));
+    let nombre = '';
+    let apellido = '';
+    let sexo = '';
+    let edad = 0;
+    let dni = 0;
+
+
+    const turnos = (dia, horario, tratamiento, sucursal) => {
+
+        do {
+        nombre = prompt('Ingrese su nombre:');
+        apellido = prompt('Ingrese su apellido:');
+        edad = Number(prompt('Ingrese su edad:'));
         if (isNaN(edad)) {
             edad = Number(prompt('El valor ingresado no es correcto. Ingrese nuevamente su edad:'));
         }
-        let dni = Number(prompt('Ingrese su numero de D.N.I:'));
+        dni = Number(prompt('Ingrese su numero de D.N.I (solo números):'));
         if (isNaN(dni)) {
             dni = Number(prompt('El valor ingresado no es correcto. Ingrese nuevamente su D.N.I:'));
         }
-        let sexo = prompt('Ingrese su sexo:');
+        sexo = prompt('Ingrese su sexo:');
+    } while (nombre.length === 0  || apellido.length === 0 || edad.length === 0 || dni.length === 0 || sexo.length === 0);
 
         const dias = dia;
         const hora = horario;
@@ -24,10 +34,8 @@ for (i = 0; i <= 5; i++) {
         alert('Estimado paciente ' + nombre + ' ' + apellido + ' el turno seleccionado para realizar el tratamiento ' + tratamientos + ' es el ' + dias + ' a las ' + hora + ' en la sucursal ubicada en ' + sucursal1);
     }
 
-    turnos(dia(), horario(), tratamiento(), sucursal());
-
-
-    function dia() {
+    
+    const dia = () => {
         const dia1 = 'Miercoles 7/09/2022';
         const dia2 = 'Miercoles 14/09/2022';
         const dia3 = 'Miercoles 21/09/2022';
@@ -41,20 +49,20 @@ for (i = 0; i <= 5; i++) {
 
         switch (dia) {
             case 1:
-                return dia = dia1;
+                return dia1;
             case 2:
-                return dia = dia2;
+                return dia2;
             case 3:
-                return dia = dia3;
+                return dia3;
             case 4:
-                return dia = dia4;
+                return dia4;
             default:
                 alert('La opción ingresada no es valida')
-                return dia = 'No existe.'
+                return 'No existe.'
         }      
     }
 
-    function horario() {
+    const horario = () => {
         const hora1 = '17 h';
         const hora2 = '17:30 h';
         const hora3 = '18:00 h';
@@ -69,24 +77,24 @@ for (i = 0; i <= 5; i++) {
 
         switch (horario) {
             case 1:
-                return horario = hora1;
+                return hora1;
             case 2:
-                return horario = hora2;
+                return hora2;
             case 3:
-                return horario = hora3;
+                return hora3;
             case 4:
-                return horario = hora4;
+                return hora4;
             case 5:
-                return horario = hora5;
+                return hora5;
             default:
                 alert('La opción ingresada no es valida')
-                return horario = 'No existe.'
+                return 'No existe.'
 
         }
 
     }
 
-    function tratamiento () {
+    const tratamiento = () => {
         const tratamiento1 = 'Adiposidad localizada';
         const tratamiento2 = 'Botox';
         const tratamiento3 = 'Manejo de cicatices';
@@ -108,57 +116,54 @@ for (i = 0; i <= 5; i++) {
 
         switch (tratamiento) {
             case 1:
-                return tratamiento =  tratamiento1;
+                return tratamiento1;
             case 2:
-                return tratamiento =  tratamiento2;
+                return tratamiento2;
             case 3:
-                return tratamiento =  tratamiento3;
+                return tratamiento3;
             case 4:
-                return tratamiento =  tratamiento4;
+                return tratamiento4;
             case 5:
-                return tratamiento =  tratamiento5;
+                return tratamiento5;
             case 6:
-                return tratamiento =  tratamiento6;
+                return tratamiento6;
             case 7:
-                return tratamiento =  tratamient7;
+                return tratamiento7;
             case 8:
-                return tratamiento =  tratamiento8;
+                return tratamiento8;
             case 9:
-                return tratamiento =  tratamiento9;
+                return tratamiento9;
             case 10:
-                return tratamiento =  tratamiento10;
+                return tratamiento10;
             default:
                 alert('La opción ingresada no es valida')
-                return tratamiento = 'No existe.'
+                return 'No existe.'
         }
 
     }
 
-    function sucursal() {
+    const sucursal = () => {
         const sucursal1 = 'Balvanera';
         const sucursal2 = 'Avellaneda';
         const sucursal3 = 'Lanus';
         let sucursal = Number(prompt('Seleccione la opción correspondiente a la sucursal donde desea ser atendido' + '\n1)' + sucursal1 + '\n2)' + sucursal2 + '\n3)' + sucursal3));
 
-
-
         if (sucursal > 3) {
             sucursal = Number(prompt('La opcion seleccionada no es valida por favor seleccione nuevamente la opción correspondiente a la sucursal donde desea ser atendido' + '\n1)' + sucursal1 + '\n2)' + sucursal2 + '\n3)' + sucursal3));
         }
 
-
-
-
         switch (sucursal) {
             case 1:
-                return sucursal = sucursal1;
+                return sucursal1;
             case 2:
-                return sucursal = sucursal2;
+                return sucursal2;
             case 3:
-                return sucursal = sucursal2;
+                return sucursal2;
             default:
                 alert('La opción ingresada no es valida')
-                return sucursal = 'No existe.'
+                return 'No existe.'
         }
     }
+
+    turnos(dia(), horario(), tratamiento(), sucursal());
 }
