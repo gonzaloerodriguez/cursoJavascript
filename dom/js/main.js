@@ -1,8 +1,9 @@
+
 //Creo los array que se van a recorrer en los cada select.
 const tratamientosDisponibles = ['Adiposidad localizada', 'Botox', 'Manejo de cicatices', 'Mesoterapia', 'Microneedling', 'Peeling', 'Plasma rico en plaquetas', 'Rellenos faciales', 'Skin booster', 'Consulta para evaluación'];
 const sucursales = ['Balvanera', 'Avellaneda', 'Lanus']; 
-const diasDisponibles = ['Miercoles 7/09/2022', 'Miercoles 14/09/2022', 'Miercoles 21/09/2022', 'Miercoles 28/09/2022'];
-const horasDisponibles = ['17 h', '17:30 h', '18:00 h', '18:30 h', '19 h'];
+let diasDisponibles = ['Miercoles 7/09/2022', 'Miercoles 14/09/2022', 'Miercoles 21/09/2022', 'Miercoles 28/09/2022'];
+let horasDisponibles = ['17 h', '17:30 h', '18:00 h', '18:30 h', '19 h'];
 
 
 
@@ -142,7 +143,6 @@ console.log(form);
 form.addEventListener('submit', (e) => {  
     e.preventDefault();
   
-
   //creo las constantes que van a contener los datos personales ingresados por el usuario.
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
@@ -153,57 +153,47 @@ form.addEventListener('submit', (e) => {
     
   //armo el objeto con los datos ingresados en el formulario.
     const datos = {
-        nombre: nombre, 
-        apellido: apellido,
-        dni: dni,
-        telefono: telefono,
-        email: email,
-        sexo: sexo,
+        nombre, 
+        apellido,
+        dni,
+        telefono,
+        email,
+        sexo,
         tratamiento: tratamientoSelect,
         sucursal: sucursalSelect,
         dia: diaSelect,
         hora: horaSelect 
        }
 
+
   //los muestro en consola.     
     console.log(datos);
 
-
-       //filtro los dias que quedan disponibles para turnos 
-     const filtrarDias =  (e) => {
-           return e !== diaSelect
-      }
-      
-           
-      let diasRestantes = diasDisponibles.filter(filtrarDias);
-
-      
-      console.log(diasRestantes);
-
-      //filtro los horarios que quedan disponibles para turnos
-
-      const filtrarHora =  (e) => {
-        return e !== horaSelect
-   }
+  
+   //guardando los valores en localStorage
+     
+   localStorage.setItem('datosDeReserva', JSON.stringify(datos));
    
-        
-   let horasRestantes = horasDisponibles.filter(filtrarHora);
+  //traigo el elemento guardado
+  
+   const datosDeReserva = JSON.parse(localStorage.getItem('datosDeReserva'));
+
+  //lo muestro en consola
+  
+   console.log(datosDeReserva);
+
+
+
+
 
    
-   console.log(horasRestantes);
-
-
-
-
     form.reset();   
+    
+
+
+  });
    
-
-
- 
-
-});
-
-
+  
 
 
 
