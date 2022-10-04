@@ -216,8 +216,8 @@ form.addEventListener('submit', (e) => {
         sexo,
         tratamiento: tratamientoSelect,
         sucursal: sucursalSelect,
-        dia: diaSelect,
-        hora: horaSelect 
+        dia: diaSelect.value,
+        hora: horaSelect.value 
        }
 
 
@@ -246,10 +246,9 @@ form.addEventListener('submit', (e) => {
 
 
 
-  //DESESTRUCTURACION de datos voy a utilizar esas variables para mostrarlas en el sweet alert en el proximo desafio de incorporar la libreria 
+  //DESESTRUCTURACION de datos voy a utilizar esa variable para mostrarla en el sweet alert  
 
-  const {nombre, apellido, tratamiento, sucursal, dia, hora} = datos;
-
+  let {nombre, dia, hora, sucursal} = datos;
 
 
 
@@ -257,6 +256,8 @@ form.addEventListener('submit', (e) => {
   // SPREAD OPERATOR para guardar en un array todos los dias donde hay turnos reservados
 
   const turnosRersevados = [...datos.dia];
+
+  console.log(turnosRersevados);
   
    //guardando los valores en localStorage
      
@@ -267,7 +268,18 @@ form.addEventListener('submit', (e) => {
    console.log(datosDeReserva);
 
 
+  //SWEET ALERT
 
+
+   swal({
+    title: `${nombre} tu reserva fue realizada`,
+    text: `Deberás concurrir el ${dia} a las ${hora} en sucursal ${sucursal}`,
+    icon: "success",
+    closeOnClickOutside: true,
+    closeOnEsc: true,
+    timer: 4000,
+  });
+    
 
 
    
