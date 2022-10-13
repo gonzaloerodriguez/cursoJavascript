@@ -1,4 +1,5 @@
 
+
 //Creo los array que se van a recorrer en los cada select.
 const tratamientosDisponibles = ['Adiposidad localizada', 'Botox', 'Manejo de cicatices', 'Mesoterapia', 'Microneedling', 'Peeling', 'Plasma rico en plaquetas', 'Rellenos faciales', 'Skin booster', 'Consulta para evaluación'];
 const sucursales = ['Balvanera', 'Avellaneda', 'Lanus']; 
@@ -168,9 +169,6 @@ function renderizarHora() {
 
 
 
-
-
-
 // Funcion para filtrar los numeros y modificar el array de numeros 
 const filtrarDia = () => { 
   // Selecciono el numero que tiene el select 
@@ -225,8 +223,6 @@ form.addEventListener('submit', (e) => {
     console.log(datos);
 
 
-
-
     const selectDia = document.getElementById("dia"); 
     const selectHora = document.getElementById("hora"); 
 
@@ -238,12 +234,6 @@ form.addEventListener('submit', (e) => {
     selectHora.remove;
     renderizarHora();
     
-
-
-
-
-
-
 
 
   //DESESTRUCTURACION de datos voy a utilizar esa variable para mostrarla en el sweet alert  
@@ -281,9 +271,23 @@ form.addEventListener('submit', (e) => {
   });
     
 
+  //Fetch para el envio de mails con la informacion del formulario (yo puse mi mail pero para hacer la prueba podes poner el tuyo y funciona sin problemas)
+  fetch("https://formsubmit.co/ajax/gonzalo-ezequiel@hotmail.com",{
+    method: "POST",
+    body: new FormData(e.target),
+  })
+  .then(res => res.ok ? res.json() : Promise.reject(res))
+  .then(json => {})
+  .catch (err => {
+    console.log(err);
+  })
+  ;
+
+
+
 
    
-    form.reset();   
+    // form.reset();   
     
 
 
