@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estética por médicos es dejar tu belleza en manos de doctores especializados en dicha área. No te dejes para después entrá y mirá nuestros tratamientos. Agendá tu turno ya mismo!">
+    <meta name="keywords" content=" baby botox, botox en la cara, estetica, medicina estetica, tratamientos esteticos, peeling, peeling medico, cicatrices, adiposidad localizada, acido hialuronico, mesoterapia, mesoterapia capilar, mesoterapia corporal, plasma, plasma rico en plaquetas, skin booster, microneedling, dermapen">
+    <meta property="og:type" content="Web site">
+    <meta property="og:title" content="Estètica Santana">
+    <meta property="og:url" content="https://esteticasantana.vercel.app/">
+    <meta property="og:image" content="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2022-08-24/011b54bdd245d301a2dde2d459e88482.ico.png">
+    <meta property="og:description" content="Estética por médicos es dejar tu belleza en manos de doctores especializados en dicha área. No te dejes para después entrá y mirá nuestros tratamientos. Agendá tu turno ya mismo!">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Estètica Santana</title>
+</head>
+<body class="new_font">
+    <header class="flex__header" id="comienzo">
+        <a href="../index.html"><img class="logo" src="../img/logo2.jpg" title= "Logo Estética Santana" alt="Logo Estetica Santana"></a>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#opciones" type="button" name="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="opciones">
+                <ul class="option">
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero hero__contacto">
+            <form id="formulario">
+                <div class="contact-form form-floating mb-3 mt-3">
+                    <input required id= "nombre" name = "nombre" type="text" class="form-control"  placeholder="Nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+                    <label for="floatingInputNombre">Nombre</label>
+                </div>
+                <div class="contact-form form-floating mb-3">
+                    <input required id= "apellido" name="apellido" type="text" class="form-control"  placeholder="Apellido" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+                    <label for="floatingInputApellido">Apellido</label>
+                </div>
+                <div class="contact-form form-floating mb-3">
+                    <input required id= "dni" name="dni" type="number" class= "form-control"  placeholder="D.N.I" title="DNI sólo acepta números">
+                    <label for="floatingInputDni">D.N.I (sólo números)</label>
+                </div>
+                <div class="contact-form form-floating mb-3">
+                    <input required id= "telefono" name="telefono" type="number" class="form-control" placeholder="Numero de telefono" title="Teléfono sólo acepta números">
+                    <label for="floatingInputTelefono">Telefono (sólo números)</label>
+                </div>
+                <div class="contact-form form-floating mb-3">
+                    <input required type="email" class="form-control"  id= "email" placeholder="name@ejemplo.com" name="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+                    <label for="floatingInputEmail">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select required class="form-select" name="sexo" id= "sexo" aria-label="Floating label select example">
+                        <option value="">Seleccione su sexo</option>
+                        <option >Mujer</option>
+                        <option >Hombre</option>
+                    </select>
+                    <label for="floatingSelectSexo">Seleccionar sexo</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select formSelect" name="tratamiento" id= "tratamiento" aria-label="Floating label select example">
+                        <option selected value="default">Seleccione el tratamiento</option>
+                    </select>
+                    <label for="floatingSelectGridTratamiento">Seleccionar tratamiento</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select disabled class="form-select" name="sucursal" id= "sucursal" aria-label="Floating label select example">
+                        <option value="default">Seleccione una sucursal</option>
+                    </select>
+                    <label for="floatingSelectGridSucursal">Seleccionar sucursal</label>
+                </div>
+                <!-- <div class="form-floating mb-3">
+                    <select class="form-select" name="dia" id= "dia" aria-label="Floating label select example">
+                        <option value="default">Seleccione un día</option>
+                    </select>
+                    <label for="floatingSelectGridDia">Seleccionar un día</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" name="hora" id= "hora" aria-label="Floating label select example">
+                        <option value="default">Seleccione un horario</option>
+                    </select>
+                    <label for="floatingSelectGridHora">Seleccionar un horario</label>
+                </div> -->
+                <div id="selectContainer" class="mb-3">
+                    <select disabled name="turno" id="turno" class="form-select"></select>
+            
+                </div>
+                <div class="form-floating mb-3">
+                    <button  type="submit" id= "reservar" class="btn btn-dark mb-3 send">Reservar</button>
+                </div>
+                <div class="contact-form-loader none">
+                    <img src="./img/hearts.svg" alt="cargando"/>
+                </div>
+                <div class="contact-form-response"></div>
+            </form>
+        </div>
+    </main>
+    <footer class="navbar navbar-expand-lg navbar-dark flex__footer">
+        <div>
+            <a href="./index.html"><img class="logo logo__footer" src="./img/logo2.jpg" title= "Logo Estética Santana" alt="Logo Estetica Santana"></a>
+            <ul>
+                <li>
+                    <a href="./ubicacion.html"><img class="mapa" src="./img/mapa.png" title= "Nuestra ubicación" alt="Nuestra ubicación"></a>
+                </li>
+                <div>
+                    <li class="dire">Azcuénaga 18</li>
+                    <li>C1029AAB - CABA</li>
+                </div>
+            </ul>
+            <div>
+                <a class="arriba" href="#comienzo">Ir arriba</a>
+                <div class="collapse navbar-collapse" id="rrss">
+                    <a href="https://es-la.facebook.com/login/device-based/regular/login/" target="_blank"><img class="rrss" src="./img/facebook.png" title= "Facebook" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="rrss" src="./img/instagram.png" title= "Instagram" alt="Instagram"></a>
+                    <a href="https://web.whatsapp.com/" target="_blank"><img class="rrss" src="./img/whatsapp.png" title= "Whatsapp" alt="Whatsapp"></a>
+                </div>
+            </div>
+            <button class="navbar-toggler redes" data-bs-toggle="collapse" data-bs-target="#rrss" type="button" name="button">
+                <span><img src="./img/redes.png" title= "Boton de redes sociales" alt="Boton de redes sociales"></span>
+            </button>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estética por médicos es dejar tu belleza en manos de doctores especializados en dicha área. No te dejes para después entrá y mirá nuestros tratamientos. Agendá tu turno ya mismo!">
+    <meta name="keywords" content=" baby botox, botox en la cara, estetica, medicina estetica, tratamientos esteticos, peeling, peeling medico, cicatrices, adiposidad localizada, acido hialuronico, mesoterapia, mesoterapia capilar, mesoterapia corporal, plasma, plasma rico en plaquetas, skin booster, microneedling, dermapen">
+    <meta property="og:type" content="Web site">
+    <meta property="og:title" content="Estètica Santana">
+    <meta property="og:url" content="https://esteticasantana.vercel.app/">
+    <meta property="og:image" content="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2022-08-24/011b54bdd245d301a2dde2d459e88482.ico.png">
+    <meta property="og:description" content="Estética por médicos es dejar tu belleza en manos de doctores especializados en dicha área. No te dejes para después entrá y mirá nuestros tratamientos. Agendá tu turno ya mismo!">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Estètica Santana</title>
+</head>
+<body class="new_font">
+    <header class="flex__header" id="comienzo">
+        <a href="../index.html"><img class="logo" src="../img/logo2.jpg" title= "Logo Estética Santana" alt="Logo Estetica Santana"></a>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#opciones" type="button" name="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="opciones">
+                <ul class="option">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./tratamientos.html">Tratamientos</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./ubicacion.html">Ubicación</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero hero__contacto">
+            <form id="formulario">
+                <div class="form-floating mb-3 mt-3">
+                    <input required id= "nombre" type="text" class="form-control"  placeholder="Nombre">
+                    <label for="floatingInputNombre">Nombre</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input required id= "apellido" type="text" class="form-control"  placeholder="Apellido">
+                    <label for="floatingInputApellido">Apellido</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input required id= "dni" type="number" class= "form-control"  placeholder="D.N.I">
+                    <label for="floatingInputDni">D.N.I (sólo números)</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input required id= "telefono" type="number" class="form-control" placeholder="Numero de telefono">
+                    <label for="floatingInputTelefono">Telefono (sólo números)</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input required type="email" class="form-control"  id= "email" placeholder="name@ejemplo.com">
+                    <label for="floatingInputEmail">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select required class="form-select" id= "sexo" aria-label="Floating label select example">
+                        <option value="">Seleccione su sexo</option>
+                        <option >Mujer</option>
+                        <option >Hombre</option>
+                    </select>
+                    <label for="floatingSelectSexo">Seleccionar sexo</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select formSelect" id= "tratamiento" aria-label="Floating label select example">
+                        <option selected value="default">Seleccione el tratamiento</option>
+                    </select>
+                    <label for="floatingSelectGridTratamiento">Seleccionar tratamiento</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id= "sucursal" disabled aria-label="Floating label select example">
+                        <option value="default">Seleccione una sucursal</option>
+                    </select>
+                    <label for="floatingSelectGridSucursal">Seleccionar sucursal</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id= "dia" disabled aria-label="Floating label select example">
+                        <option value="default">Seleccione un día</option>
+                    </select>
+                    <label for="floatingSelectGridDia">Seleccionar un día</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id= "hora" disabled aria-label="Floating label select example">
+                        <option value="default">Seleccione un horario</option>
+                    </select>
+                    <label for="floatingSelectGridHora">Seleccionar un horario</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <button  type="submit" id= "reservar" class="btn btn-dark mb-3 send">Reservar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="navbar navbar-expand-lg navbar-dark flex__footer">
+        <div>
+            <a href="../index.html"><img class="logo logo__footer" src="../img/logo2.jpg" title= "Logo Estética Santana" alt="Logo Estetica Santana"></a>
+            <ul>
+                <li>
+                    <a href="./ubicacion.html"><img class="mapa" src="../img/mapa.png" title= "Nuestra ubicación" alt="Nuestra ubicación"></a>
+                </li>
+                <div>
+                    <li class="dire">Azcuénaga 18</li>
+                    <li>C1029AAB - CABA</li>
+                </div>
+            </ul>
+            <div>
+                <a class="arriba" href="#comienzo">Ir arriba</a>
+                <div class="collapse navbar-collapse" id="rrss">
+                    <a href="https://es-la.facebook.com/login/device-based/regular/login/" target="_blank"><img class="rrss" src="../img/facebook.png" title= "Facebook" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="rrss" src="../img/instagram.png" title= "Instagram" alt="Instagram"></a>
+                    <a href="https://web.whatsapp.com/" target="_blank"><img class="rrss" src="../img/whatsapp.png" title= "Whatsapp" alt="Whatsapp"></a>
+                </div>
+            </div>
+            <button class="navbar-toggler redes" data-bs-toggle="collapse" data-bs-target="#rrss" type="button" name="button">
+                <span><img src="../img/redes.png" title= "Boton de redes sociales" alt="Boton de redes sociales"></span>
+            </button>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html> -->

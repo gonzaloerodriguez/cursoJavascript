@@ -1,0 +1,44 @@
+@import "./maps";
+
+
+
+%hero {
+    width: 100%;
+    height: 80vh;
+    background: map-get($descriptions, bg-img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+%tipografia-parrafos {
+    font-family: serenity, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+%tipografia-subtitulos {
+    font-family: serenity, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+%tipografia-h3 {
+    font-family: serenity, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+%tipografia-h1 {
+    font-family: 'abril-display',serif;
+    font-weight: 800;
+    font-style: normal;
+}

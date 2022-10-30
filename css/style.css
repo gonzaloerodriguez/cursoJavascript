@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://use.typekit.net/ova6eyt.css");
+.font {
+  font-family: 'Dancing Script'; }
+
+.new_font {
+  font-family: serenity, sans-serif;
+  font-weight: 300;
+  font-style: normal; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.main__index .hero, main .hero__contacto {
+  width: 100%;
+  height: 80vh;
+  background: url(../img/back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center; }
+
+.flex__header .navbar div .option li a, .main__index .hero p, .flex__footer div ul div, .flex__footer div div .arriba {
+  font-family: serenity, sans-serif;
+  font-weight: 300;
+  font-style: normal; }
+
+.main__index .hero h1 {
+  font-family: 'abril-display',serif;
+  font-weight: 800;
+  font-style: normal; }
+
+.flex__header {
+  background-color: #f9b9b785;
+  width: 100%;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .flex__header a .logo {
+    width: 10rem;
+    height: 8rem; }
+  .flex__header .navbar {
+    flex-direction: row-reverse; }
+    .flex__header .navbar .navbar-toggler {
+      background-color: #f9b9b7;
+      border-color: #000;
+      margin-right: 0.5rem; }
+    .flex__header .navbar div .option {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap; }
+      .flex__header .navbar div .option li {
+        padding-right: 16px; }
+        .flex__header .navbar div .option li a {
+          text-decoration: none;
+          font-size: 25px;
+          color: black;
+          transition: 0.3s; }
+          .flex__header .navbar div .option li a:hover {
+            color: #fd8682e5; }
+          .flex__header .navbar div .option li a:active {
+            color: #fd8682e5; }
+
+.main__index .hero, main .hero__contacto {
+  width: 100%;
+  height: 80vh;
+  background: url(../img/back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center; }
+
+.flex__header .navbar div .option li a, .main__index .hero p, .flex__footer div ul div, .flex__footer div div .arriba {
+  font-family: serenity, sans-serif;
+  font-weight: 300;
+  font-style: normal; }
+
+.main__index .hero h1 {
+  font-family: 'abril-display',serif;
+  font-weight: 800;
+  font-style: normal; }
+
+.main__index {
+  background-color: #f9b9b7bb; }
+  .main__index .hero h1 {
+    height: 17%;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 20px;
+    color: black; }
+  .main__index .hero p {
+    text-align: center;
+    font-size: 30px;
+    height: 45%; }
+  .main__index .hero a {
+    text-decoration: none;
+    color: black;
+    border: solid;
+    border-radius: 5px;
+    border-color: #f9b9b785;
+    text-align: center;
+    background-color: #f9b9b7;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 30px;
+    box-shadow: 3px 3px rgba(252, 240, 240, 0.384); }
+    .main__index .hero a:hover {
+      transform: scale(1.1);
+      color: black;
+      background-color: #fd86822d; }
+    .main__index .hero a:active {
+      color: #f9b9b7;
+      background-color: black; }
+  .main__index .section__carousel {
+    border: solid rgba(0, 139, 139, 0.205); }
+    .main__index .section__carousel .carousel {
+      width: 50%;
+      margin-left: 25%; }
+      .main__index .section__carousel .carousel .carousel-inner .carousel-item a img {
+        height: 280px;
+        width: 70px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-radius: 15px; }
+
+main .hero__contacto {
+  height: max-content; }
+  main .hero__contacto form .form-floating {
+    width: 150%; }
+  main .hero__contacto form .form-floating-error {
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: #f824ce;
+    color: white;
+    transition: all 800ms ease; }
+  main .hero__contacto form div .send {
+    color: black;
+    border-color: #f9b9b785;
+    background-color: #f9b9b7; }
+  main .hero__contacto form .none {
+    display: none; }
+  main .hero__contacto form .contact-form-loader {
+    margin-bottom: 10%;
+    text-align: center; }
+
+.flex__footer {
+  display: block;
+  background-color: #f9b9b785; }
+  .flex__footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .flex__footer div a .logo {
+      width: 10rem;
+      height: 8rem; }
+    .flex__footer div ul {
+      list-style: none;
+      display: flex; }
+      .flex__footer div ul li a .mapa {
+        border-radius: 4%;
+        width: 6rem;
+        height: 6rem; }
+      .flex__footer div ul div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-style: normal;
+        font-size: 120%; }
+        .flex__footer div ul div .dire {
+          font-size: 150%; }
+    .flex__footer div div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      .flex__footer div div .arriba {
+        transition: 0.3s;
+        font-size: 120%;
+        text-decoration: none;
+        color: #000; }
+        .flex__footer div div .arriba:hover {
+          color: #fd8682e5; }
+      .flex__footer div div div {
+        margin-left: 10px; }
+        .flex__footer div div div a {
+          text-decoration: none;
+          color: #000;
+          margin-right: 16px; }
+          .flex__footer div div div a .rrss {
+            border-radius: 4%;
+            width: 4rem;
+            height: 4rem; }
+    .flex__footer div .navbar-toggler, .flex__footer div .redes {
+      background-color: #ff80f4;
+      margin-right: 0.5rem;
+      background-color: #f9b9b723; }
+      .flex__footer div .navbar-toggler span .boton__de__redes, .flex__footer div .redes span .boton__de__redes {
+        border-radius: 4%;
+        width: 6rem;
+        height: 6rem; }
